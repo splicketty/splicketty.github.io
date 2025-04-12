@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonjour Hi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: url('galaxy.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .text-container {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        
+        .text-container a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .text-container a:visited {
+            color: white;
+        }
+        
+        .animated-text span {
+            opacity: 0;
+            display: inline-block;
+        }
+        
+        .animated-text span:nth-child(1) {
+            animation: fadeChar 3s infinite 0s;
+        }
+        
+        .animated-text span:nth-child(2) {
+            animation: fadeChar 3s infinite 0.2s;
+        }
+        
+        .animated-text span:nth-child(3) {
+            animation: fadeChar 3s infinite 0.4s;
+        }
+        
+        .animated-text span:nth-child(4) {
+            animation: fadeChar 3s infinite 0.6s;
+        }
+        
+        .animated-text span:nth-child(5) {
+            animation: fadeChar 3s infinite 0.8s;
+        }
+        
+        .animated-text span:nth-child(6) {
+            animation: fadeChar 3s infinite 1s;
+        }
+        
+        .animated-text span:nth-child(7) {
+            animation: fadeChar 3s infinite 1.2s;
+        }
+        
+        .animated-text span:nth-child(8) {
+            animation: fadeChar 3s infinite 1.4s;
+        }
+        
+        .animated-text span:nth-child(9) {
+            animation: fadeChar 3s infinite 1.6s;
+        }
+        
+        .animated-text span:nth-child(10) {
+            animation: fadeChar 3s infinite 1.8s;
+        }
+        
+        .animated-text span:nth-child(11) {
+            animation: fadeChar 3s infinite 2.0s;
+        }
+        
+        @keyframes fadeChar {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .text-container {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <a href="https://linkedin.com/in/amalie-lambert-a7151b174">
+            <div class="animated-text">
+                <span>b</span>
+                <span>o</span>
+                <span>n</span>
+                <span>j</span>
+                <span>o</span>
+                <span>u</span>
+                <span>r</span>
+                <span>&nbsp;</span>
+                <span>h</span>
+                <span>i</span>
+                <span>!</span>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        // This ensures the link works even though we've broken up the text
+        document.querySelector('.animated-text').parentElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = this.getAttribute('href');
+        });
+    </script>
+</body>
+</html>
